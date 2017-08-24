@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 14:58:37 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/23 19:43:45 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/23 23:26:02 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int		main(int argc, char **argv)
 	ft_memset(&root, 0, sizeof(t_list));
 	if (argc > 1)
 	{
+		root.size = argc - 1;
 		if (!(root.stk_a = (int *)ft_memalloc(sizeof(int) * (argc - 1))))
+			error(4, &root);
+		if (!(root.stk_b = (int *)ft_memalloc(sizeof(int) * (argc - 1))))
 			error(4, &root);
 		while (++i < argc)
 		{
@@ -35,11 +38,15 @@ int		main(int argc, char **argv)
 				!(check_dup(root.stk_a, i, val)) ? error(3, &root) : 0;
 			root.stk_a[i - 1] = val;
 		}
+		root.a_ind = root.size - 1;
 		for (int j = 0; j < argc - 1; j++)
 			printf("%d\n", root.stk_a[j]);
 		get_oper(&root);
-		for (int j = 0; j < argc - 1; j++)
-			printf("%d\n", root.stk_a[j]);
+		printf("BEFORE\na_ind: %d\tb_ind: %d\n\n", root.a_ind, root.b_ind);
+
+		puts("stk_a\t\tstk_b");
+		for (int j = 0; root.a_ind > root.b_ind ? j <= root.a_ind : j < root.b_ind; j++)
+			printf("%d\t\t%d\n", root.stk_a[j], root.stk_b[j]);
 		root.stk_a ? free(root.stk_a) : 0;
 		root.stk_b ? free(root.stk_b) : 0;
 	}
