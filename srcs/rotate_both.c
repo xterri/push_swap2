@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 23:16:54 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/23 23:22:45 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/24 10:23:04 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	rotate_both(t_list *list)
 {
 	rotate(list->stk_a, list->a_ind);
-	rotate(list->stk_b, list->b_ind- 1);
+	rotate(list->stk_b, list->b_ind - 1);
 }
