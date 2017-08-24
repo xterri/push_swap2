@@ -6,7 +6,7 @@
 #*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/08/22 08:16:21 by thuynh            #+#    #+#             *#
-#*   Updated: 2017/08/23 19:46:13 by thuynh           ###   ########.fr       *#
+#*   Updated: 2017/08/23 23:18:25 by thuynh           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -29,7 +29,9 @@ OBJDIR = ./objs/
 SRCDIR = ./srcs/
 
 FILES = check_val check_dup check_oper \
-		swap_a swap_b swap_both \
+		swap swap_both \
+		push_a push_b \
+		rotate rotate_both \
 		get_oper do_oper \
 		error
 

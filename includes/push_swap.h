@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 14:07:47 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/23 19:46:02 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/23 23:18:34 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,12 @@
 typedef struct s_list
 {
 	int			zero;
+	int			a_ind;
+	int			b_ind;
+	int			tmp;
 	int			*stk_a;
 	int			*stk_b;
+	size_t		size;
 }				t_list;
 
 /*
@@ -41,8 +45,11 @@ void			do_oper(t_list *list, int nb);
 /*
 ** OPERAND / INSTRUCTIONS FUNCTION
 */
-void			swap_a(int *arr);
-void			swap_b(int *arr);
+void			push_a(t_list *list);
+void			push_b(t_list *list);
+void			swap(int *arr);
+void			rotate(int *arr, int size);
+void			rotate_both(t_list *list);
 void			swap_both(t_list *list);
 
 /*
