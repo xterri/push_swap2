@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 14:07:47 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/23 23:18:34 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/24 12:24:40 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,10 @@ void			push_a(t_list *list);
 void			push_b(t_list *list);
 void			swap(int *arr);
 void			rotate(int *arr, int size);
-void			rotate_both(t_list *list);
+void			rev_rotate(int *arr, int size);
 void			swap_both(t_list *list);
+void			rotate_both(t_list *list);
+void			rev_rotate_both(t_list *list);
 
 /*
 ** OUTPUTS ERROR MESSAGES

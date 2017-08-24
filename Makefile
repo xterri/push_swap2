@@ -6,7 +6,7 @@
 #*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/08/22 08:16:21 by thuynh            #+#    #+#             *#
-#*   Updated: 2017/08/23 23:18:25 by thuynh           ###   ########.fr       *#
+#*   Updated: 2017/08/24 12:24:07 by thuynh           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -32,6 +32,7 @@ FILES = check_val check_dup check_oper \
 		swap swap_both \
 		push_a push_b \
 		rotate rotate_both \
+		rev_rotate rev_rotate_both \
 		get_oper do_oper \
 		error
 

@@ -6,14 +6,14 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 19:52:40 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/24 10:22:55 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/24 12:27:27 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 void	do_oper(t_list *list, int nb)
-{
+
 	if (nb == 1)
 		swap(list->stk_a);
 	else if (nb == 2)
@@ -30,12 +30,10 @@ void	do_oper(t_list *list, int nb)
 		rotate(list->stk_b, list->b_ind - 1);
 	else if (nb == 8)
 		rotate_both(list);
-/*
 	else if (nb == 9)
-		rev_rotate_a(list);
+		rev_rotate(list->stk_a, list->a_ind + 1);
 	else if (nb == 10)
-		rev_rotate_b(list);
+		rev_rotate(list->stk_b, list->b_ind);
 	else if (nb == 11)
 		rev_rotate_both(list);
-*/
 }
