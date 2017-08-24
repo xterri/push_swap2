@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_a.c                                           :+:      :+:    :+:   */
+/*   push_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/22 20:23:03 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/23 19:39:11 by thuynh           ###   ########.fr       */
+/*   Created: 2017/08/23 20:01:58 by thuynh            #+#    #+#             */
+/*   Updated: 2017/08/23 22:14:53 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap_a(int *arr)
+void	push_b(t_list *list)
 {
-	if (!arr)
+	if ((list->a_ind < 0) || !list->stk_b)
 		return ;
-	ft_swap(&arr[0], &arr[1]);
-}	
+	ft_pop(list->stk_a, &list->tmp, &list->a_ind);
+	ft_push(list->stk_b, list->tmp, &list->b_ind);
+}
