@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 19:52:40 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/23 19:46:28 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/23 23:24:03 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,27 @@
 void	do_oper(t_list *list, int nb)
 {
 	if (nb == 1)
-		swap_a(list->stk_a);
+		swap(list->stk_a);
 	else if (nb == 2)
-		swap_b(list->stk_b);
+		swap(list->stk_b);
 	else if (nb == 3)
 		swap_both(list);
-/*
 	else if (nb == 4)
-		push_a(*list);
+		push_a(list);
 	else if (nb == 5)
-		push_b(*list);
+		push_b(list);	
 	else if (nb == 6)
-		rotate_a(*list);
+		rotate(list->stk_a, list->a_ind);
 	else if (nb == 7)
-		rotate_b(*list);
+		rotate(list->stk_b, list->b_ind - 1);
 	else if (nb == 8)
-		rotate_both(*list);
+		rotate_both(list);
+/*
 	else if (nb == 9)
-		rev_rotate_a(*list);
+		rev_rotate_a(list);
 	else if (nb == 10)
-		rev_rotate_b(*list);
+		rev_rotate_b(list);
 	else if (nb == 11)
-		rev_rotate_both(*list);
+		rev_rotate_both(list);
 */
 }
