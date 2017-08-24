@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 18:36:26 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/23 19:43:02 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/24 10:32:47 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int		get_oper(t_list *list)
 		}
 		!(op_nb = check_oper(buff)) ? error(5, list) : 0;
 		do_oper(list, op_nb);
+		puts("\nstk_a\t\tstk_b");
+		for (int j = 0; list->a_ind > list->b_ind ? j <= list->a_ind : j <= list->b_ind; j++)
+			printf("%d\t\t%d\n", list->stk_a[j], list->stk_b[j]);
 	}
 	if (!ret)
 		return (0);
