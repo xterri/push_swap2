@@ -6,7 +6,7 @@
 #    By: thuynh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/10 18:12:49 by thuynh            #+#    #+#              #
-#*   Updated: 2017/08/23 17:27:08 by thuynh           ###   ########.fr       *#
+#*   Updated: 2017/08/23 20:47:48 by thuynh           ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SRCDIR = ./srcs/
 
 OBJDIR = ./objs/
 
-FILES = ft_atol ft_bzero ft_isdigit ft_memalloc ft_strcmp ft_swap ft_memset
+FILES = ft_atol ft_bzero ft_isdigit ft_memalloc ft_strcmp ft_swap ft_memset \
+		ft_push ft_pop
 
 SRCS = $(patsubst %, %.c, $(FILES))
 
