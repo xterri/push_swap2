@@ -6,14 +6,14 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 19:52:40 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/24 12:27:27 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/24 14:14:03 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 void	do_oper(t_list *list, int nb)
-
+{
 	if (nb == 1)
 		swap(list->stk_a);
 	else if (nb == 2)

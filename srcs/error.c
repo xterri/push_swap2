@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 10:30:54 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/23 15:33:24 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/24 20:27:34 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	error(int n, t_list *list)
 {
 	if (!list)
-		write(1, "list null\n", 10);
+		write(1, "Error\n", 6);
 	if (n == 1)
 		write(2, "Not an int\n", 11);
 	else if (n == 2)

@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 19:04:29 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/22 20:04:33 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/26 19:35:00 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		check_oper(char *s)
 {
-	if (!ft_strcmp(s, "sa")) // should still read if spaces present?
+	if (!ft_strcmp(s, "sa"))
 		return (1);
 	if (!ft_strcmp(s, "sb"))
 		return (2);

@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 14:58:37 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/24 11:15:48 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/26 19:50:00 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int		main(int argc, char **argv)
 	if (argc > 1)
 	{
 		root.size = argc - 1;
-		if (!(root.stk_a = (int *)ft_memalloc(sizeof(int) * (argc))))
+		if (!(root.stk_a = (int *)ft_memalloc(sizeof(int) * argc)))
 			error(4, &root);
-		if (!(root.stk_b = (int *)ft_memalloc(sizeof(int) * (argc))))
+		if (!(root.stk_b = (int *)ft_memalloc(sizeof(int) * argc)))
 			error(4, &root);
 		while (++i < argc)
 		{
@@ -39,12 +39,8 @@ int		main(int argc, char **argv)
 			root.stk_a[i - 1] = val;
 		}
 		root.a_ind = root.size - 1;
-		for (int j = 0; j < argc - 1; j++)
-			printf("%d\n", root.stk_a[j]);
 		get_oper(&root);
-		puts("");
-		for (int j = 0; root.a_ind > root.b_ind ? j <= root.a_ind : j <= root.b_ind; j++)
-			printf("%d\t\t%d\n", root.stk_a[j], root.stk_b[j]);
+		!check_output(&root) ? write(1, "KO\n", 3) : write(1, "OK\n", 3);
 		root.stk_a ? free(root.stk_a) : 0;
 		root.stk_b ? free(root.stk_b) : 0;
 	}

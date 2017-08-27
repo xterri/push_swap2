@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 18:36:26 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/24 10:32:47 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/26 20:00:36 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,24 @@ int		get_oper(t_list *list)
 {
 	int		ret;
 	int		op_nb;
-	char	buff[BUFF_SIZE];
+	char	*str;
 
-	while ((ret = read (0, &buff, BUFF_SIZE)))
+	for (int i = 0; list->a_ind > list->b_ind ? i <= list->a_ind : i <= list->b_ind; i++)
+		printf("%d\t\t%d\n", list->stk_a[i], list->stk_b[i]);
+	puts("");
+	while ((ret = get_next_line(0, &str)))
 	{
-		buff[ret - 1] = '\0';
-		if (ret < 3 || ret > 4)
-		{
-			buff[0] ? error(5, list) : 0;
-			return (0);
-		}
-		!(op_nb = check_oper(buff)) ? error(5, list) : 0;
+		if (!ft_strlen(str))
+			break ;
+		!(op_nb = check_oper(str)) ? error(5, list) : 0;
 		do_oper(list, op_nb);
-		puts("\nstk_a\t\tstk_b");
-		for (int j = 0; list->a_ind > list->b_ind ? j <= list->a_ind : j <= list->b_ind; j++)
-			printf("%d\t\t%d\n", list->stk_a[j], list->stk_b[j]);
+		puts("stk_a\t\tstk_b");
+		for (int i = 0; list->a_ind > list->b_ind ? i <= list->a_ind : i <= list->b_ind; i++)
+			printf("%d\t\t%d\n", list->stk_a[i], list->stk_b[i]);
+		puts("");
+		free(str);
+		str = NULL;
 	}
-	if (!ret)
-		return (0);
+	free(str);
 	return (1);
 }
