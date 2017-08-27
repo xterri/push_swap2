@@ -6,7 +6,7 @@
 #*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/08/22 08:16:21 by thuynh            #+#    #+#             *#
-#*   Updated: 2017/08/24 12:24:07 by thuynh           ###   ########.fr       *#
+#*   Updated: 2017/08/26 14:12:44 by thuynh           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -28,13 +28,16 @@ OBJDIR = ./objs/
 
 SRCDIR = ./srcs/
 
-FILES = check_val check_dup check_oper \
+FILES = ft_printstrlist ft_lstdel \
+		check_val check_dup check_oper \
 		swap swap_both \
 		push_a push_b \
 		rotate rotate_both \
 		rev_rotate rev_rotate_both \
-		get_oper do_oper \
-		error
+		get_oper do_oper check_output \
+		error \
+		find_min find_max \
+		merge_sortish
 
 SRCS = $(patsubst %, %.c, $(FILES))
 
@@ -68,3 +71,6 @@ re: fclean all
 
 checker: re $(NAME)
 	@gcc $(FLAGS) $(INCLUDES) $(NAME) srcs/checker.c -o checker
+
+push_swap: re $(NAME)
+	@gcc $(FLAGS) $(INCLUDES) $(NAME) srcs/push_swap.c -o push_swap
