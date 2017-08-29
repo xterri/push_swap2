@@ -6,7 +6,7 @@
 #    By: thuynh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/10 18:12:49 by thuynh            #+#    #+#              #
-#*   Updated: 2017/08/26 19:32:53 by thuynh           ###   ########.fr       *#
+#*   Updated: 2017/08/28 16:21:14 by thuynh           ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJDIR = ./objs/
 FILES = ft_atol ft_bzero ft_isdigit ft_memalloc ft_strcmp ft_swap ft_memset \
 		ft_push ft_pop ft_putchar ft_putstr ft_putendl ft_strnew ft_strcpy \
 		get_next_line ft_strjoin ft_strsub ft_strchr ft_strdup ft_strcat \
-		ft_strlen
+		ft_strlen ft_memdel ft_strdel
 
 SRCS = $(patsubst %, %.c, $(FILES))
 
