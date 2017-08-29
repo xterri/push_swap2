@@ -6,11 +6,12 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 08:46:55 by thuynh            #+#    #+#             */
-/*   Updated: 2017/07/20 11:29:06 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/28 17:11:16 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int		parse_newlines(t_line **lst, char **line)
 {
@@ -85,6 +86,8 @@ int		get_next_line(const int fd, char **line)
 	tmp = get_fd(fd, &root);
 	while ((tmp->size = read(tmp->fd, &buf, BUFF_SIZE)) > 0)
 	{
+		if (tmp->size <= 1)
+			return (-1);
 		buf[tmp->size] = '\0';
 		if (!(make_str(buf, tmp)))
 			return (-1);
