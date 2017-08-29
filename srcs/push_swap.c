@@ -6,12 +6,16 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/25 16:37:43 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/26 16:47:41 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/28 16:22:01 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// will need to have more than one linked list and more sorting algortithms
+// to solve and find the shortest list of instructions
+// need a list array to hold the results and # of instructions used from 
+// each sort algorithm
 int		main(int argc, char **argv)
 {
 	int				i;
@@ -48,6 +52,6 @@ int		main(int argc, char **argv)
 		root.stk_b ? free(root.stk_b) : 0;
 	}
 	else
-		write(1, "Not enough arguments\n", 21);
+		write(1, "Not enough arguments\n", 21);	
 	return (0);
 }
