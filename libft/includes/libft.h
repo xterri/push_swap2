@@ -6,7 +6,7 @@
 /*   By: thuynh <thuynh@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 18:56:46 by thuynh            #+#    #+#             */
-/*   Updated: 2017/08/26 19:44:00 by thuynh           ###   ########.fr       */
+/*   Updated: 2017/08/28 16:22:23 by thuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ long				ft_atol(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_isdigit(int c);
 void				*ft_memalloc(size_t size);
+void				ft_memdel(void **ap);
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_pop(int *arr, int *tmp, int *index);
 void				ft_push(int *arr, int val, int *index);
@@ -43,6 +44,7 @@ char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
+void				ft_strdel(char **as);
 char				*ft_strdup(const char *s1);
 char				*ft_strjoin(char const *s1, char const *s2);
 size_t				ft_strlen(const char *s);
